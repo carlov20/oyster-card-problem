@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class TwoZonesIncludingOneFareRule implements FareRule {
     @Override
     public boolean shouldProcess(JourneyType type, Zone one, Zone two) {
-        return JourneyType.TUBE.equals(type) && (Zone.ONE.equals(one) || Zone.ONE.equals(two) && !one.equals(two));
+        return JourneyType.TUBE.equals(type) && (Zone.ONE.equals(one) || Zone.ONE.equals(two)) && !one.equals(two);
     }
 
     @Override
